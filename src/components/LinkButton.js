@@ -4,9 +4,9 @@ import { Icon } from '@iconify/react';
 import tiktokIcon from '@iconify/icons-simple-icons/tiktok';
 import youtubeIcon from '@iconify/icons-simple-icons/youtube';
 import instagramIcon from '@iconify/icons-simple-icons/instagram';
+import anchorIcon from '@iconify-icons/simple-icons/anchor';
 import githubIcon from '@iconify/icons-simple-icons/github';
 import discordIcon from '@iconify/icons-simple-icons/discord';
-import './WidthLimit.scss';
 
 const LinkButton = (props) => {
   const [icon, setIcon] = useState('');
@@ -17,10 +17,8 @@ const LinkButton = (props) => {
       setIcon(<Icon icon={instagramIcon} />);
     } else if (props.link.includes('tiktok')) {
       setIcon(<Icon icon={tiktokIcon} />);
-    } else if (props.link.includes('github')) {
-      setIcon(<Icon icon={githubIcon} />);
-    } else if (props.link.includes('discord')) {
-      setIcon(<Icon icon={discordIcon} />);
+    } else if (props.link.includes('anchor')) {
+      setIcon(<Icon icon={anchorIcon} />);
     } else {
       setIcon('Uncaught Exceptions Pod');
     }

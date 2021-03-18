@@ -1,32 +1,23 @@
 import React from 'react';
+import { Container } from 'react-bootstrap';
+import Particles from './components/Particles';
+import LinkList from './components/LinkList'
 import {
   BrowserRouter as Router,
   Route,
   Redirect,
   Switch,
 } from 'react-router-dom';
-import About from './pages/About';
-import Links from './pages/Links';
-import Projects from './pages/Projects';
-import MainNavigation from './components/MainNavigation';
+
 
 const App = () => {
   return (
     <Router>
-      <MainNavigation />
+      <Particles />
       <main>
-        <Switch>
-          <Route path="/" exact>
-            <Links />
-          </Route>
-          <Route path="/projects" exact>
-            <Projects />
-          </Route>
-          <Route path="/about" exact>
-            <About />
-          </Route>
-          <Redirect to="/" />
-        </Switch>
+        <Container>
+          <LinkList/>
+        </Container>
       </main>
     </Router>
   );
